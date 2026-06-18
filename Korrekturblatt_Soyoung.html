@@ -123,13 +123,6 @@
         <h1>Verbessern &amp; selbst&nbsp;kontrollieren</h1>
         <p class="lead">Schreibe zuerst deine eigene Lösung – klappe danach die Selbstkontrolle auf und vergleiche.</p>
       </div>
-      <div style="flex:none">
-        <div class="view-label">Ansicht</div>
-        <div class="seg">
-          <button id="btnA" class="active" onclick="setVariant('A')">Karten</button>
-          <button id="btnB" onclick="setVariant('B')">Lernheft</button>
-        </div>
-      </div>
     </div>
     <div class="meta-row">
       <div class="field">
@@ -168,22 +161,6 @@
     </section>
   </main>
 
-  <!-- VARIANTE B -->
-  <main id="viewB" class="sheet hidden">
-    <section>
-      <div class="teil"><div class="tnum">Teil 1</div><h2>Wörterliste</h2></div>
-      <div class="wbtable">
-        <div class="wbhead"><div>Wort</div><div>Synonyme</div><div>Beispielsatz</div></div>
-        <div id="vocabRowsB"></div>
-      </div>
-    </section>
-    <section id="grammarSecB">
-      <div class="teil"><div class="tnum">Teil 2</div><h2>Grammatikkorrektur</h2></div>
-      <p class="wbsub">Korrigiere die folgenden Sätze auf der Linie. Klappe danach die Selbstkontrolle auf.</p>
-      <div id="grammarRowsB"></div>
-    </section>
-  </main>
-
   <div class="footer">
     <span class="tip">Tipp: Erst selbst korrigieren – dann kontrollieren. Deine Eingaben werden automatisch gespeichert.</span>
     <button class="resetbtn" onclick="resetAll()">Eingaben zurücksetzen</button>
@@ -196,14 +173,13 @@ const DATA = {"vocab": [{"wort": "der Einsatz", "meta": "Plural: Einsätze", "sy
 const STORAGE_KEY = "deutsch_korrektur_soyoung";
 const STUDENT = "Soyoung";
 
-let state = {variant:'A', open:{}, answers:{}, name:STUDENT, datum:''};
+let state = {open:{}, answers:{}, name:STUDENT, datum:''};
 try { const s = JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}'); state = Object.assign(state, s); } catch(e){}
 if(!state.name) state.name = STUDENT;
 
 function persist(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }catch(e){} }
 function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
-function setVariant(v){ state.variant=v; persist(); render(); }
 function setMeta(k,val){ state[k]=val; persist(); updateProgress(); }
 function setAnswer(id,val){ state.answers[id]=val; persist(); updateProgress(); }
 function toggleOpen(id){ state.open[id]=!state.open[id]; persist(); render(); }
@@ -247,41 +223,15 @@ function grammarCardA(g,i){
     +sol+'</div>';
 }
 
-function vocabRowB(w){
-  return '<div class="wbrow">'
-    +'<div><span class="wbword">'+esc(w.wort)+'</span><div class="wbmeta">'+esc(w.meta)+'</div></div>'
-    +'<div>'+esc(w.synonyme.join(', '))+'</div>'
-    +'<div>'+esc(w.beispiel)+'</div></div>';
-}
-
-function grammarRowB(g,i){
-  const id='g'+i; const open=!!state.open[id];
-  const sol = open ? '<div class="wbsol"><div class="lbl">Selbstkontrolle</div>'
-      +'<div class="sol">'+esc(g.loesung)+'</div><div class="kom">'+esc(g.kommentar)+'</div></div>' : '';
-  return '<div class="wbg"><div class="wbg-nr">'+(i+1)+'</div><div class="wbg-body">'
-    +'<div class="wbg-satz">„'+esc(g.satz)+'“</div>'
-    +'<textarea class="wbg-area" rows="2" placeholder="… deine Verbesserung" oninput="setAnswer(\''+id+'\',this.value)">'+esc(state.answers[id]||'')+'</textarea>'
-    +'<button class="wbg-link" onclick="toggleOpen(\''+id+'\')">'+(open?'Selbstkontrolle ausblenden ↑':'Selbstkontrolle anzeigen ↓')+'</button>'
-    +sol+'</div></div>';
-}
-
 function render(){
-  document.getElementById('btnA').classList.toggle('active', state.variant==='A');
-  document.getElementById('btnB').classList.toggle('active', state.variant==='B');
-  document.getElementById('viewA').classList.toggle('hidden', state.variant!=='A');
-  document.getElementById('viewB').classList.toggle('hidden', state.variant!=='B');
-
   document.getElementById('inpName').value = state.name||'';
   document.getElementById('inpDatum').value = state.datum||'';
 
   document.getElementById('vocabCardsA').innerHTML = DATA.vocab.map(vocabCardA).join('');
   document.getElementById('grammarCardsA').innerHTML = DATA.grammar.map(grammarCardA).join('');
-  document.getElementById('vocabRowsB').innerHTML = DATA.vocab.map(vocabRowB).join('');
-  document.getElementById('grammarRowsB').innerHTML = DATA.grammar.map(grammarRowB).join('');
 
   const noGrammar = DATA.grammar.length===0;
   document.getElementById('grammarSecA').classList.toggle('hidden', noGrammar);
-  document.getElementById('grammarSecB').classList.toggle('hidden', noGrammar);
   document.getElementById('progressWrap').classList.toggle('hidden', noGrammar);
 
   updateProgress();
