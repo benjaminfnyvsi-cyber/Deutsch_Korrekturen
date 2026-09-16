@@ -16,7 +16,6 @@
   textarea,input{font-family:'Hanken Grotesk',sans-serif}
   .wrap{min-height:100vh;background:#FBF6F2;padding:36px 20px 60px}
   .inner{max-width:880px;margin:0 auto}
-  /* header */
   .header{background:#fff;border:1px solid #F0E6DE;border-radius:22px;padding:28px 30px;box-shadow:0 6px 24px rgba(190,69,47,0.06)}
   .head-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D8553D}
@@ -37,7 +36,6 @@
   .progress-top .emo{font-size:18px}
   .bar{height:9px;background:#F5EAE3;border-radius:999px;overflow:hidden}
   .bar>div{height:100%;background:linear-gradient(90deg,#E97A5F,#E25A43);border-radius:999px;transition:width .35s ease}
-  /* cards (A) */
   main{margin-top:30px}
   .sectionA{display:flex;flex-direction:column;gap:16px;margin-bottom:34px}
   .sec-head{display:flex;align-items:center;gap:12px}
@@ -78,7 +76,6 @@
   .kom-row{display:flex;align-items:flex-start;gap:11px;padding-top:11px;border-top:1px dashed #CFE6D7}
   .kom-txt{font-size:15px;line-height:1.55;color:#3A4A40}
   @keyframes scIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-  /* workbook (B) */
   .sheet{background:#fff;border:1px solid #F0E6DE;border-radius:22px;padding:36px 40px;margin-top:30px;box-shadow:0 6px 24px rgba(190,69,47,0.05);display:flex;flex-direction:column;gap:38px}
   .teil{border-bottom:3px solid #E25A43;padding-bottom:9px;margin-bottom:18px}
   .teil .tnum{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C2452F}
@@ -105,7 +102,6 @@
   .wbsol .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#C2452F;margin-bottom:6px}
   .wbsol .sol{font-size:17px;line-height:1.45;color:#2B2320;font-weight:600;margin-bottom:9px}
   .wbsol .kom{font-size:15px;line-height:1.55;color:#6B5F58}
-  /* footer */
   .footer{margin-top:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
   .footer .tip{font-size:13px;color:#A89A91}
   .resetbtn{border:1px solid #F0E6DE;background:#fff;color:#8A7C73;font-weight:600;font-size:13px;padding:9px 15px;border-radius:999px;cursor:pointer;transition:.15s}
@@ -143,7 +139,6 @@
     </div>
   </header>
 
-  <!-- VARIANTE A -->
   <main id="viewA">
     <section class="sectionA">
       <div>
@@ -169,8 +164,8 @@
 </div></div>
 
 <script>
-const DATA = {"vocab": [{"wort": "das Fieber", "meta": "nur Singular", "synonyme": ["die erhöhte Temperatur", "die Hitze (Krankheit)"], "beispiel": "Das Kind hat hohes Fieber."}, {"wort": "der Heuschnupfen", "meta": "nur Singular", "synonyme": ["die Pollenallergie", "die allergische Rhinitis"], "beispiel": "Im Frühling leidet sie unter Heuschnupfen."}, {"wort": "genießen", "meta": "Verb; genießt, genoss, genossen", "synonyme": ["auskosten", "sich erfreuen an", "in vollen Zügen erleben"], "beispiel": "Wir genießen den Sonnenuntergang am Strand."}, {"wort": "teuflisch", "meta": "Adjektiv", "synonyme": ["diabolisch", "boshaft", "höllisch"], "beispiel": "Er hatte einen teuflischen Plan."}, {"wort": "der Teufelskreis", "meta": "Plural: Teufelskreise", "synonyme": ["der Circulus vitiosus", "die Abwärtsspirale"], "beispiel": "Schulden und Zinsen bilden oft einen Teufelskreis."}, {"wort": "die Fabrik", "meta": "Plural: Fabriken", "synonyme": ["das Werk", "die Produktionsstätte", "die Manufaktur"], "beispiel": "In dieser Fabrik werden Autos montiert."}, {"wort": "das Treibhausgas", "meta": "Plural: Treibhausgase", "synonyme": ["das Klimagas", "das CO2 (Beispiel)"], "beispiel": "CO2 ist das bekannteste Treibhausgas."}, {"wort": "todkrank", "meta": "Adjektiv", "synonyme": ["unheilbar krank", "sterbenskrank", "im Sterben liegend"], "beispiel": "Der todkranke Patient wurde palliativ versorgt."}, {"wort": "der Produzent", "meta": "Plural: Produzenten", "synonyme": ["der Hersteller", "der Erzeuger", "der Fabrikant"], "beispiel": "Der Produzent liefert die Ware direkt an die Läden."}, {"wort": "ausnutzen", "meta": "Verb (trennbar)", "synonyme": ["ausnützen", "missbrauchen", "ausbeuten", "nutzen (negativ)"], "beispiel": "Er nutzt ihre Gutmütigkeit schamlos aus."}, {"wort": "reinigen", "meta": "Verb", "synonyme": ["säubern", "putzen", "sauber machen"], "beispiel": "Die Filter müssen regelmäßig gereinigt werden."}, {"wort": "die Kontroverse", "meta": "Plural: Kontroversen", "synonyme": ["der Streit", "die Auseinandersetzung", "die Debatte"], "beispiel": "Der Vorschlag löste eine heftige Kontroverse aus."}, {"wort": "kontrovers", "meta": "Adjektiv", "synonyme": ["strittig", "umstritten", "widersprüchlich diskutiert"], "beispiel": "Das Thema wird sehr kontrovers diskutiert."}, {"wort": "der Bedacht", "meta": "nur Singular; „mit Bedacht“", "synonyme": ["die Umsicht", "die Besonnenheit", "die Vorsicht"], "beispiel": "Sie wählte ihre Worte mit Bedacht."}, {"wort": "der Verräter", "meta": "Plural: Verräter", "synonyme": ["der Überläufer", "der Judas (übertr.)", "der Kollaborateur"], "beispiel": "Er wurde als Verräter am eigenen Volk beschimpft."}, {"wort": "die Armee", "meta": "Plural: Armeen", "synonyme": ["das Heer", "das Militär", "die Streitkräfte"], "beispiel": "Die Armee wurde an die Grenze verlegt."}, {"wort": "der Genosse / die Genossin", "meta": "Nomen; Plural: Genossen", "synonyme": ["der Kamerad", "der Mitstreiter", "der Weggefährte"], "beispiel": "Die alten Genossen trafen sich noch einmal zum Jahrestag."}, {"wort": "das Projekt", "meta": "Nomen; Plural: Projekte", "synonyme": ["das Vorhaben", "das Unternehmen", "die Initiative"], "beispiel": "Das neue Projekt startet nächsten Monat."}, {"wort": "anprobieren", "meta": "Verb, trennbar", "synonyme": ["ausprobieren", "probetragen", "testen (ungenau)"], "beispiel": "Sie hat drei Kleider anprobiert, bevor sie sich entschieden hat."}, {"wort": "die Beziehung", "meta": "Nomen; Plural: Beziehungen", "synonyme": ["die Verbindung", "das Verhältnis", "der Kontakt"], "beispiel": "Die beiden pflegen seit Jahren eine enge Beziehung."}, {"wort": "pädagogisch", "meta": "Adjektiv", "synonyme": ["erzieherisch", "didaktisch", "lehrreich"], "beispiel": "Sie hat ein pädagogisches Konzept für die Klasse entwickelt."}, {"wort": "der Gletscher", "meta": "Nomen; Plural: Gletscher", "synonyme": ["das Eisfeld", "die Eismasse"], "beispiel": "Der Gletscher schmilzt durch den Klimawandel immer schneller."}, {"wort": "der Aufkleber", "meta": "Nomen; Plural: Aufkleber", "synonyme": ["der Sticker", "das Klebeetikett"], "beispiel": "Er hat einen Aufkleber auf seinen Laptop geklebt."}, {"wort": "das Denken / die Denkweise", "meta": "kontrastives Nomenpaar", "synonyme": ["die Gedankenwelt / die Mentalität", "das Nachdenken / die Sichtweise"], "beispiel": "Sein Denken hat sich verändert, seit er eine neue Denkweise kennengelernt hat."}, {"wort": "die Menschheit", "meta": "Nomen; nur Singular", "synonyme": ["die Menschen (allgemein)", "die Weltbevölkerung"], "beispiel": "Der Klimawandel betrifft die gesamte Menschheit."}], "grammar": [{"satz": "Nase fließt", "loesung": "Meine Nase läuft.", "kommentar": "Für eine laufende Nase sagt man „die Nase läuft“ (nicht „fließt“). Meist mit Possessivpronomen: „Meine Nase läuft.“"}, {"satz": "Ich konnte noch nicht die andere Thema für die Aufgabe schreiben", "loesung": "Ich konnte das andere Thema für die Aufgabe noch nicht schreiben.", "kommentar": "„Thema“ ist sächlich: „das andere Thema“ (nicht „die andere“). Die Verneinung „noch nicht“ steht näher am Satzende: „… für die Aufgabe noch nicht schreiben“."}, {"satz": "Ich kann die alle schriftlichen Ausdrücke schreiben", "loesung": "Ich kann alle schriftlichen Ausdrücke schreiben.", "kommentar": "Nach „alle“ steht kein weiterer Artikel: „alle schriftlichen Ausdrücke“ (nicht „die alle“)."}, {"satz": "Es handelt sich um … Sachen, deswegen muss man mit der Achtung sagen.", "loesung": "Es handelt sich um sensible Sachen, deshalb muss man es mit Achtung sagen.", "kommentar": "„mit Achtung“ steht ohne Artikel „der“. Das Verb braucht ein Objekt: „muss man es … sagen“. „deshalb“ statt „deswegen“ ist hier stilistisch besser."}, {"satz": "Nach der viel Zeit, konnten wir endlich unsere Land zurückbekommen", "loesung": "Nach langer Zeit konnten wir endlich unser Land zurückbekommen.", "kommentar": "„nach langer Zeit“ (Adjektivdeklination, kein Artikel „der“). „Land“ ist sächlich: „unser Land“ (nicht „unsere“). Vor „konnten“ steht hier kein Komma."}, {"satz": "Damals konnte ich mit meinem jüngeren Bruder auf dem Dorf Dakchi spielen.", "loesung": "Damals konnte ich mit meinem jüngeren Bruder im Dorf Dakchi spielen.", "kommentar": "Für „innerhalb eines Ortes/Dorfes“ steht die Präposition „in“ (hier „im“ = in dem), nicht „auf“. „Dakchi“ bleibt als Name des Spiels unverändert."}, {"satz": "Wenn man Essen essen muss man nicht erst essen, bevor ältere Menschen Essen essen.", "loesung": "Wenn man essen muss, sollte man nicht essen, bevor ältere Menschen gegessen haben.", "kommentar": "Interpretation/Rekonstruktion unsicher, bitte prüfen – Satz war stark verschachtelt. „Essen essen“ ist doppelt (Nomen + Verb); im „bevor“-Nebensatz wird ein vorzeitiges Ereignis mit Perfekt ausgedrückt: „bevor … gegessen haben“."}]};
-const STORAGE_KEY = "korr_hyo_seok";
+const DATA = {"vocab": [{"wort": "eigenartig", "meta": "Adjektiv", "synonyme": ["seltsam", "sonderbar", "merkwürdig"], "beispiel": "Er hat eine eigenartige Art zu sprechen."}], "grammar": [{"satz": "Die Männern nach dem Ende Schminke entfernt haben", "loesung": "Die Männer haben nach dem Ende die Schminke entfernt.", "kommentar": "Nominativ Plural ist „die Männer“ (nicht „Männern“, das ist Dativ); Wortstellung: Subjekt – Verb(2) – … – Partizip II am Ende; Artikel „die“ vor „Schminke“ (fem.) nicht vergessen."}]};
+const STORAGE_KEY = "korrekturblatt_hyo_seok";
 const STUDENT = "Hyo Seok";
 
 let state = {open:{}, answers:{}, name:STUDENT, datum:''};

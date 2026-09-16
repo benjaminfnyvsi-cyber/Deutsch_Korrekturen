@@ -16,7 +16,6 @@
   textarea,input{font-family:'Hanken Grotesk',sans-serif}
   .wrap{min-height:100vh;background:#FBF6F2;padding:36px 20px 60px}
   .inner{max-width:880px;margin:0 auto}
-  /* header */
   .header{background:#fff;border:1px solid #F0E6DE;border-radius:22px;padding:28px 30px;box-shadow:0 6px 24px rgba(190,69,47,0.06)}
   .head-top{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap}
   .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#D8553D}
@@ -37,7 +36,6 @@
   .progress-top .emo{font-size:18px}
   .bar{height:9px;background:#F5EAE3;border-radius:999px;overflow:hidden}
   .bar>div{height:100%;background:linear-gradient(90deg,#E97A5F,#E25A43);border-radius:999px;transition:width .35s ease}
-  /* cards (A) */
   main{margin-top:30px}
   .sectionA{display:flex;flex-direction:column;gap:16px;margin-bottom:34px}
   .sec-head{display:flex;align-items:center;gap:12px}
@@ -78,7 +76,6 @@
   .kom-row{display:flex;align-items:flex-start;gap:11px;padding-top:11px;border-top:1px dashed #CFE6D7}
   .kom-txt{font-size:15px;line-height:1.55;color:#3A4A40}
   @keyframes scIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
-  /* workbook (B) */
   .sheet{background:#fff;border:1px solid #F0E6DE;border-radius:22px;padding:36px 40px;margin-top:30px;box-shadow:0 6px 24px rgba(190,69,47,0.05);display:flex;flex-direction:column;gap:38px}
   .teil{border-bottom:3px solid #E25A43;padding-bottom:9px;margin-bottom:18px}
   .teil .tnum{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#C2452F}
@@ -105,7 +102,6 @@
   .wbsol .lbl{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#C2452F;margin-bottom:6px}
   .wbsol .sol{font-size:17px;line-height:1.45;color:#2B2320;font-weight:600;margin-bottom:9px}
   .wbsol .kom{font-size:15px;line-height:1.55;color:#6B5F58}
-  /* footer */
   .footer{margin-top:30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
   .footer .tip{font-size:13px;color:#A89A91}
   .resetbtn{border:1px solid #F0E6DE;background:#fff;color:#8A7C73;font-weight:600;font-size:13px;padding:9px 15px;border-radius:999px;cursor:pointer;transition:.15s}
@@ -143,7 +139,6 @@
     </div>
   </header>
 
-  <!-- VARIANTE A -->
   <main id="viewA">
     <section class="sectionA">
       <div>
@@ -169,8 +164,8 @@
 </div></div>
 
 <script>
-const DATA = {"vocab": [{"wort": "der Knorpel", "meta": "Plural: Knorpel", "synonyme": ["das Knorpelgewebe", "die Bandscheibe (verwandt)"], "beispiel": "Zwischen den Gelenken befindet sich elastischer Knorpel."}, {"wort": "geheilt", "meta": "Partizip II von „heilen“", "synonyme": ["gesund geworden", "kuriert", "genesen"], "beispiel": "Die Wunde ist inzwischen vollständig geheilt."}, {"wort": "lehrt", "meta": "3. Person von „lehren“", "synonyme": ["unterrichtet", "bringt bei", "vermittelt"], "beispiel": "Sie lehrt Deutsch an einer Universität."}, {"wort": "der Hamster", "meta": "Plural: Hamster", "synonyme": ["das Nagetier (Hamster)"], "beispiel": "Der Hamster hortet Futter in seinen Backentaschen."}, {"wort": "der Sonnenblumenkern", "meta": "Plural: Sonnenblumenkerne", "synonyme": ["der Kern (Sonnenblume)"], "beispiel": "Sonnenblumenkerne sind reich an gesunden Fetten."}, {"wort": "die Wechseljahre", "meta": "nur Plural", "synonyme": ["die Menopause", "das Klimakterium"], "beispiel": "In den Wechseljahren verändert sich der Hormonhaushalt."}, {"wort": "der Urgroßvater", "meta": "Plural: Urgroßväter (nicht „Uhrgroßvater“)", "synonyme": ["der Vater des Großvaters"], "beispiel": "Mein Urgroßvater wurde noch im 19. Jahrhundert geboren."}, {"wort": "das Gift", "meta": "Plural: Gifte", "synonyme": ["das Toxin", "die Giftsubstanz"], "beispiel": "Das Gift der Schlange wirkt innerhalb von Minuten."}, {"wort": "vergiften", "meta": "Verb", "synonyme": ["mit Gift töten", "verseuchen", "kontaminieren"], "beispiel": "Abgase vergiften langsam die Luft in der Stadt."}, {"wort": "messen", "meta": "Verb; misst, maß, gemessen", "synonyme": ["ermitteln", "bestimmen", "abmessen"], "beispiel": "Der Arzt misst regelmäßig den Blutdruck."}, {"wort": "woanders", "meta": "Adverb", "synonyme": ["an einem anderen Ort", "anderswo", "sonstwo"], "beispiel": "Wenn es hier nicht klappt, versuchen wir es einfach woanders."}, {"wort": "autoritär", "meta": "Adjektiv", "synonyme": ["herrisch", "bestimmend", "diktatorisch"], "beispiel": "Ihr Vater hat sie sehr autoritär erzogen."}, {"wort": "sicher", "meta": "Adjektiv/Adverb; mehrdeutig: gewiss/geschützt", "synonyme": ["gewiss", "geschützt", "zuverlässig"], "beispiel": "Ich bin mir nicht sicher, ob die Brücke wirklich sicher ist."}, {"wort": "lässig", "meta": "Adjektiv", "synonyme": ["locker", "entspannt", "ungezwungen"], "beispiel": "Er trug ein lässiges T-Shirt zum Vorstellungsgespräch."}, {"wort": "im Mittelpunkt stehen", "meta": "Wendung", "synonyme": ["im Zentrum stehen", "die Aufmerksamkeit auf sich ziehen", "im Rampenlicht stehen"], "beispiel": "Bei der Party stand sie den ganzen Abend im Mittelpunkt."}, {"wort": "betonen", "meta": "Verb", "synonyme": ["hervorheben", "unterstreichen", "herausstellen"], "beispiel": "Der Lehrer betonte, wie wichtig regelmäßiges Üben ist."}, {"wort": "die Brust", "meta": "Nomen; Plural: Brüste", "synonyme": ["der Brustkorb", "der Busen", "(fig.) das Herz"], "beispiel": "Nach dem Sport tat ihm die Brust weh."}, {"wort": "die Keule", "meta": "Nomen; Plural: Keulen", "synonyme": ["der Schlegel", "das Bein (vom Tier)", "der Knüppel"], "beispiel": "Zum Grillen hat er eine Hähnchenkeule mitgebracht."}, {"wort": "zart", "meta": "Adjektiv", "synonyme": ["weich", "mild", "empfindlich"], "beispiel": "Das Fleisch war so zart, dass man es kaum kauen musste."}, {"wort": "verhaftet", "meta": "Partizip; verhaften", "synonyme": ["festgenommen", "in Gewahrsam genommen", "gefasst"], "beispiel": "Der Verdächtige wurde am Flughafen verhaftet."}, {"wort": "die Entführung", "meta": "Nomen; Plural: Entführungen", "synonyme": ["die Verschleppung", "das Kidnapping", "der Raub (selten)"], "beispiel": "Die Entführung des Kindes löste eine landesweite Suche aus."}, {"wort": "veröffentlicht", "meta": "Partizip; veröffentlichen", "synonyme": ["publiziert", "herausgegeben", "bekanntgegeben"], "beispiel": "Die Studie wurde letzte Woche veröffentlicht."}, {"wort": "das Opfer", "meta": "Nomen; Plural: Opfer", "synonyme": ["der Geschädigte", "der Betroffene", "der Leidtragende"], "beispiel": "Die Polizei sprach mit den Opfern des Unfalls."}, {"wort": "trotzdem", "meta": "Konjunktionaladverb", "synonyme": ["dennoch", "nichtsdestotrotz", "gleichwohl"], "beispiel": "Es regnete stark, trotzdem sind wir spazieren gegangen."}, {"wort": "das Versuchskaninchen", "meta": "Nomen; Plural: Versuchskaninchen; fig.", "synonyme": ["die Versuchsperson", "das Testobjekt", "(fig.) das Versuchsobjekt"], "beispiel": "Ich fühle mich hier wie das Versuchskaninchen für die neue Software."}, {"wort": "die Palme", "meta": "Nomen; Plural: Palmen", "synonyme": ["der Palmenbaum", "die tropische Pflanze"], "beispiel": "Am Strand standen hohe Palmen."}, {"wort": "die Decke / der Deckel", "meta": "kontrastives Nomenpaar (verschiedenes Genus)", "synonyme": ["die Bettdecke / der Verschluss", "die Zimmerdecke / der Topfdeckel"], "beispiel": "Ich habe mich mit einer warmen Decke zugedeckt, aber vergiss nicht, den Deckel auf den Topf zu legen."}], "grammar": []};
-const STORAGE_KEY = "korr_seonyoung";
+const DATA = {"vocab": [{"wort": "die Statistik", "meta": "Plural: Statistiken", "synonyme": ["die Erhebung", "die Auswertung", "die Datenanalyse"], "beispiel": "Die Statistik zeigt einen klaren Trend."}, {"wort": "mutig", "meta": "Adjektiv", "synonyme": ["tapfer", "furchtlos", "kühn"], "beispiel": "Es war mutig, die eigene Meinung zu sagen."}, {"wort": "ernst", "meta": "Adjektiv", "synonyme": ["seriös", "gravierend", "bedeutsam"], "beispiel": "Die Lage ist ernst, wir sollten reagieren."}, {"wort": "die Intention", "meta": "Plural: Intentionen", "synonyme": ["die Absicht", "das Vorhaben", "der Zweck"], "beispiel": "Seine Intention war es, zu helfen."}, {"wort": "zunehmen", "meta": "Verb; nimmt zu, nahm zu, zugenommen", "synonyme": ["steigen", "wachsen", "sich erhöhen"], "beispiel": "Die Nachfrage dürfte weiter zunehmen."}, {"wort": "der Kindesmissbrauch", "meta": "nur Singular", "synonyme": ["die Kindesmisshandlung", "der Missbrauch von Minderjährigen"], "beispiel": "Kindesmissbrauch muss konsequent bestraft werden."}, {"wort": "die Fläche", "meta": "Plural: Flächen", "synonyme": ["die Oberfläche", "der Flächeninhalt", "das Areal"], "beispiel": "Der Park hat eine Fläche von zwei Hektar."}, {"wort": "der Durchmesser", "meta": "Plural: Durchmesser", "synonyme": ["der Diameter", "die Breite (ungenau)"], "beispiel": "Der Durchmesser des Rohrs beträgt zehn Zentimeter."}, {"wort": "die Kündigungsfrist", "meta": "Plural: Kündigungsfristen", "synonyme": ["die Kündigungszeit", "die Frist zur Kündigung"], "beispiel": "Die Kündigungsfrist beträgt drei Monate."}], "grammar": [{"satz": "Gestern hat er kommt in Wohnung gesehen", "loesung": "Gestern habe ich gesehen, wie er in die Wohnung gekommen ist.", "kommentar": "Mischung aus Präsens „kommt“ und Perfekt „hat … gesehen“ vermeiden. Besser mit „wie“-Nebensatz und korrektem Perfekt „ist … gekommen“; Artikel „die“ vor „Wohnung“ nicht vergessen."}]};
+const STORAGE_KEY = "korrekturblatt_seonyoung";
 const STUDENT = "Seonyoung";
 
 let state = {open:{}, answers:{}, name:STUDENT, datum:''};
